@@ -1,0 +1,22 @@
+{
+  "name": "native-document-startup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/vite",
+    "build": "node_modules/.bin/vite build",
+    "lint": "eslint template",
+    "preview": "node_modules/.bin/vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "native-document": "^1.0.1"
+  },
+  "devDependencies": {
+    "vite": "^7.0.4"
+  }
+}
