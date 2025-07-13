@@ -4,7 +4,7 @@ import {Button, Div, H3, ShowIf} from "native-document/src/elements";
 import './counter.css';
 
 export default function Counter({ min }) {
-    const count = Observable(0);
+    const count = Observable(min);
     const minError = Observable(false);
 
     const increment = () => {
@@ -24,7 +24,7 @@ export default function Counter({ min }) {
 
     return Div({class: 'counter-container'}, [
         Div({class: 'counter-value'}, count),
-        ShowIf(minError, () => Div({class: 'counter-error'}, 'Minimum value is 0'), 'Show error if value is bellow '+min),
+        ShowIf(minError, () => Div({class: 'counter-error'}, 'Minimum value is 0')),
         Div({class: 'counter-controls'}, [
             Button('Decrement').nd.on.click(decrement),
             Button('Increment').nd.on.click(increment)

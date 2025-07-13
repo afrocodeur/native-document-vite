@@ -1,6 +1,5 @@
 import {Div, H2} from "native-document/src/elements";
-import {Link} from "native-document/router";
-import Counter from "../../components/counter/Counter";
+import Counter from "@/components/counter/Counter";
 
 import './home.css';
 
