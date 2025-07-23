@@ -1,5 +1,5 @@
 import {Observable} from "native-document";
-import {Button, Div, H3, ShowIf} from "native-document/src/elements";
+import {Button, Div, H3, ShowIf, Strong} from "native-document/src/elements";
 
 import './counter.css';
 
@@ -8,7 +8,7 @@ export default function Counter({ min }) {
     const minError = Observable(false);
 
     const increment = () => {
-        count.set(count.val() + 1);
+        count.set(count.$value + 1);
         minError.set(false);
     };
 
@@ -24,10 +24,11 @@ export default function Counter({ min }) {
 
     return Div({class: 'counter-container'}, [
         Div({class: 'counter-value'}, count),
-        ShowIf(minError, () => Div({class: 'counter-error'}, 'Minimum value is 0')),
+        Strong('ClickCount'.tr({ count })),
+        ShowIf(minError, () => Div({class: 'counter-error'}, 'Minimum value is '+min)),
         Div({class: 'counter-controls'}, [
-            Button('Decrement').nd.on.click(decrement),
-            Button('Increment').nd.on.click(increment)
+            Button('Decrement'.tr()).nd.on.click(decrement),
+            Button('Increment'.tr()).nd.on.click(increment)
         ]),
     ])
 };

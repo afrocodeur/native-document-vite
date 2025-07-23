@@ -1,0 +1,8 @@
+{
+  "Welcome to Native Document": "Bienvenue sur Native Document",
+  "French": "Français",
+  "English": "Anglais",
+  "Increment": "Incrémenter",
+  "Decrement": "Décrémenter",
+  "ClickCount": "Vous avez cliqué {{ count }} fois."
+}
