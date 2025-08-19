@@ -1,8 +1,12 @@
 import {Button} from "native-document/src/elements";
-import {I18nService} from "@/core/services/lang/I18nService";
+import {I18nService} from "native-document-i18n";
+import {Observable} from "native-document";
 
 
 export default function LangButton(label, lang, onClick) {
-    return Button({ class: { active: I18nService.current.is(lang) } }, label)
-        .nd.on.click(onClick);
+    const isSelected = Observable(lang === I18nService.current.$value);
+    I18nService.current.on(lang, () => isSelected.set(true), () => isSelected.set(false));
+
+    return Button({ class: { active: isSelected } }, label)
+        .nd.onClick(onClick);
 };

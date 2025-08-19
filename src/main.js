@@ -1,9 +1,10 @@
-import {I18nService} from "@/core/services/lang/I18nService";
+import {I18nService} from "native-document-i18n";
 import {default as DefaultRouter} from '@/routes';
+import resources from "@/lang/resources";
 
 import './index.css';
 
 const root = document.getElementById('root');
 
-I18nService.init();
+I18nService.init(resources);
 DefaultRouter.mount(root);

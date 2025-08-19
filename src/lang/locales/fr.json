@@ -4,5 +4,6 @@
   "English": "Anglais",
   "Increment": "Incrémenter",
   "Decrement": "Décrémenter",
-  "ClickCount": "Vous avez cliqué {{ count }} fois."
+  "ClickCount": "Vous avez cliqué {{ count }} fois.",
+  "Minimum value is {{ min }}": "La valeur minimale est {{ min }}"
 }
