@@ -1,5 +1,5 @@
 import {Observable} from "native-document";
-import {Button, Div, H3, ShowIf, Strong} from "native-document/src/elements";
+import {Button, Div, ShowIf, Strong} from "native-document/src/elements";
 
 import './counter.css';
 import {tr} from "native-document-i18n";

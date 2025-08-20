@@ -1,4 +1,4 @@
-import {Button, Div, H2, Strong} from "native-document/src/elements";
+import { Div, H2 } from "native-document/src/elements";
 import Counter from "@/components/counter/Counter";
 
 import './home.css';
