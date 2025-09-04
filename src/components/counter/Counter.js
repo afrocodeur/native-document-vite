@@ -23,8 +23,6 @@ export default function Counter({ min }) {
         });
     };
 
-    console.log(Button(tr('Decrement')).nd)
-
     return Div({class: 'counter-container'}, [
         Div({class: 'counter-value'}, count),
         Strong(tr('ClickCount', { count })),
@@ -33,5 +31,5 @@ export default function Counter({ min }) {
             Button(tr('Decrement')).nd.onClick(decrement),
             Button(tr('Increment')).nd.onClick(increment)
         ]),
-    ])
+    ]);
 };
